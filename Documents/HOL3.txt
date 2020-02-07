@@ -1,0 +1,19 @@
+Use the File system to store user data in a json file.
+Have two screens, one for register and one for logging in.
+
+
+let documentsPath = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.applicationDirectory, .userDomainMask, true)[0])
+     
+    let logsPath = documentsPath.appendingPathComponent(self.inputName!)
+    
+    print(logsPath!)
+    do{
+    try FileManager.default.createDirectory(atPath: logsPath!.path, withIntermediateDirectories: true, attributes: nil)
+       
+      
+       
+      showToastMessage(controller: self, message: "Folder created successfully", seconds: 5)
+       
+    }catch let error as NSError{
+    print("Unable to create folder",error)
+    }

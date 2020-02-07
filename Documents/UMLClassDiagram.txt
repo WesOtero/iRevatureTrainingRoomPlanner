@@ -1,0 +1,45 @@
+Class Diagram:
+
+User-
+	Role:	App-Admin (Admin Access)
+		Batch-Admin (End User)
+	Email
+	Name
+	Token
+
+Trainer-
+	Name
+	Availability
+	Batch
+	Email
+	Skills (That can teach)
+
+Assosiate-
+	Name
+	Email
+	Batch
+	Program (Training Program)
+
+Batch-
+	Program
+	NumOfAssosiates
+	Skills (To be taught)
+
+Campus-
+	Name
+	Locations
+
+Location-
+	Name
+	Rooms
+
+Room-
+	Name
+	Status, Open, Pending, Close, Overriden
+	Max Seats
+	Resources
+	Calendar
+
+Calendar
+	OpenDates
+	ClosedDates
